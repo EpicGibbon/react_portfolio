@@ -19,7 +19,7 @@ npm i
 ```
 
 ## Usage
-TBD
+<img src="src/assets/images/portfolio.png" width=400px>
 
 ## License
 ISC
