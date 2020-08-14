@@ -3,6 +3,7 @@ import Hero from '../Components/Hero'
 import Content from '../Components/Content';
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Axios from 'axios';
 
 class Contact extends React.Component {
 
@@ -21,11 +22,11 @@ class Contact extends React.Component {
         const target = e.target
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
-        
+
         this.setState({
             [name]: value
         })
-        
+
     }
 
 
@@ -36,28 +37,48 @@ class Contact extends React.Component {
             disabled: true
         })
 
+        Axios.post('http://localhost:3030/api/email', this.state)
+            .then(res => {
+                if (res.data.success) {
+                    this.setState({
+                        disabled: false,
+                        emailSent: true
+                    });
+                } else {
+                    this.setState({
+                        disabled: false,
+                        emailSent: false
+                    });
+                }
+            })
+            .catch(err => {
+                this.setState({
+                    disabled: false,
+                    emailSent: false
+                });
+            })
     }
 
     render() {
         return (
             <div>
-                <Hero title={this.props.title}/>
+                <Hero title={this.props.title} />
 
                 <Content>
                     <Form onSubmit={this.handleSubmit}>
                         <Form.Group>
                             <Form.Label htmlFor="full-name"> Full Name  </Form.Label>
-                            <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange}/>
+                            <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
                         </Form.Group>
 
                         <Form.Group>
                             <Form.Label htmlFor="email"> Email  </Form.Label>
-                            <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange}/>
+                            <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
                         </Form.Group>
 
                         <Form.Group>
                             <Form.Label htmlFor="message"> Message </Form.Label>
-                            <Form.Control id="message" name="message" as="textarea" rows="3" value={this.state.email} onChange={this.handleChange}/>
+                            <Form.Control id="message" name="message" as="textarea" rows="3" value={this.state.text} onChange={this.handleChange} />
                         </Form.Group>
 
                         <Button className="d-inline-block" variant="primary" type="submit" disabled={this.state.disabled}>
