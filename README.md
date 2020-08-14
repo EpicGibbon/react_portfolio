@@ -2,7 +2,7 @@
   ![badge](https://img.shields.io/badge/License-ISC-red)
 
 ## Description
-This is my second attempt at a portfolio website, however this time the application is using React, and Node.
+This is my second attempt at a portfolio website, however this time the application is using React, and Node. The back-end to this application is coming very soon.
 
 ## Table of Contents
 * [Description](#Description)
