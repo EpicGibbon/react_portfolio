@@ -35,5 +35,7 @@ N/A
 ## Questions 
 You can click the following link to be taken to my GitHub profile: (http://github.com./EpicGibbon)
 
+Please feel free to checkout the live application here! https://epicgibbon.github.io/react_portfolio/
+
 
 Feel free to reach out to me with any questions or comments: [mailto:Michant1997@gmail.com]
