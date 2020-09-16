@@ -21,13 +21,13 @@ function About(props) {
 
             <Row>
                 <Col>
-                GitHub:
+                <a href="https://github.com/EpicGibbon">Github</a>
                 </Col>
                 <Col>
-                LinkedIn:
+                <a href="https://www.linkedin.com/in/anthony-aguiar-ba7b0a123/">LinkedIn</a>
                 </Col>
                 <Col>
-                Resume: 
+                <a href="https://docs.google.com/document/d/1eEsY8e9b8XJQXuadoCrlYBhiILj2Twt7ZHBt7fbbP40/edit">Resume</a>
                 </Col>
             </Row>
             
