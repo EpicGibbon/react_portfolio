@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../Components/Card'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import xfiles from '../assets/images/xfiles.jpg'
+import bandsNotes from '../assets/images/Bands&Notes.png'
 import pbudget from '../assets/images/pbudget.png'
 import workout from '../assets/images/workout.png'
 
@@ -15,10 +15,10 @@ class Carousel extends React.Component {
             displays: [
                 {
                     id: 0,
-                    title: "X-Files",
-                    subTitle: "X-Files is an satirical App that allows a user to search for recorded UFO Sightings.",
-                    imgSrc: xfiles,
-                    link: "https://murmuring-reef-63999.herokuapp.com/",
+                    title: "Bands&Notes",
+                    subTitle: "Bands&Notes is a platform for independent artists to signup and create their bandpage and have it shared to users interested in finding these artists",
+                    imgSrc: bandsNotes,
+                    link: "https://stream-boat.herokuapp.com/",
                     selected: false
                 },
                 {
